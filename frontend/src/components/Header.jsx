@@ -1,9 +1,7 @@
-import React from "react";
 import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logoutUser, reset } from "../features/auth/authSlice";
-import { useEffect } from "react";
 
 function Header() {
   // State
@@ -16,13 +14,6 @@ function Header() {
     dispatch(reset());
     navigate("/");
   };
-  // useEffect
-  // useEffect(() => {
-  //   if (!user) {
-  //     navigate("/login");
-  //   }
-  //   dispatch(reset());
-  // }, [user, dispatch]);
 
   return (
     <header className="header">
